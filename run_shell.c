@@ -93,7 +93,11 @@ if (!CheckCharSeparator(info->arg[i], " \t\n"))
 k++;
 if (!k)
 return;
-path = LocateCMDInPath(info, _OutputEnvironmentVariables(info, "PATH="), info->argv[0]);
+path = LocateCMDInPath(
+info,
+_OutputEnvironmentVariables(info, "PATH="),
+info->argv[0]
+);
 if (path)
 {
 info->path = path;

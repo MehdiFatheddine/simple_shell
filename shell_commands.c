@@ -69,7 +69,8 @@ _DisplayStringError(info->argv[1]), _DisplayCharError('\n');
 }
 else
 {
-_SetEnvironmentVariable(info, "OLDPWD", _OutputEnvironmentVariables(info, "PWD="));
+_SetEnvironmentVariable(info, "OLDPWD", _OutputEnvironmentVariables
+(info, "PWD="));
 _SetEnvironmentVariable(info, "PWD", getcwd(buffer, 1024));
 }
 return (0);
